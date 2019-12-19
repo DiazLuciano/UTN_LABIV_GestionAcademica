@@ -1,0 +1,57 @@
+-- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: bd_tp_integrador
+-- ------------------------------------------------------
+-- Server version	5.7.27-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `cursos_x_alumnos`
+--
+
+DROP TABLE IF EXISTS `cursos_x_alumnos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cursos_x_alumnos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `legajo_alumno` int(11) NOT NULL,
+  `id_curso` int(11) NOT NULL,
+  `nota1` int(11) DEFAULT NULL,
+  `nota2` int(11) DEFAULT NULL,
+  `recu1` int(11) DEFAULT NULL,
+  `recu2` int(11) DEFAULT NULL,
+  `situacion` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`,`legajo_alumno`,`id_curso`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cursos_x_alumnos`
+--
+
+LOCK TABLES `cursos_x_alumnos` WRITE;
+/*!40000 ALTER TABLE `cursos_x_alumnos` DISABLE KEYS */;
+INSERT INTO `cursos_x_alumnos` VALUES (1,1434,1,7,8,3,8,'REGULAR'),(2,1172,1,10,7,7,7,'REGULAR'),(3,1113,0,0,0,0,0,'LIBRE'),(4,1118,0,8,8,8,8,'REGULAR'),(5,1113,3,0,0,0,0,'LIBRE'),(6,1118,3,8,8,8,8,'REGULAR'),(7,1030,4,1,2,3,5,'LIBRE'),(8,1081,4,0,0,0,0,'REGULAR'),(9,1113,5,0,0,0,0,'REGULAR'),(10,1118,5,8,8,8,8,'REGULAR'),(11,1173,5,0,0,0,0,'REGULAR'),(12,1188,5,5,5,5,3,'REGULAR'),(14,1188,6,5,5,5,3,'REGULAR'),(15,1208,6,10,9,9,3,'LIBRE'),(16,2006,7,NULL,NULL,NULL,NULL,'REGULAR'),(17,1030,8,1,2,3,5,'LIBRE'),(18,1115,8,1,2,0,3,'REGULAR'),(19,1118,8,8,8,8,8,'REGULAR'),(20,1130,8,NULL,NULL,NULL,NULL,'REGULAR'),(21,1173,8,NULL,NULL,NULL,NULL,'REGULAR');
+/*!40000 ALTER TABLE `cursos_x_alumnos` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-12-17 14:52:44
